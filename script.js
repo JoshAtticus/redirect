@@ -1,5 +1,10 @@
 const redirects = {
-    "profile": "https://scratch.mit.edu/users/Chiroyce/"
+    "scratch": "https://scratch.mit.edu/users/JoshAtticus/"
+    "github": "https://github.com/JoshAtticus"
+    "osmanic-github": "https://github.com/OSMANiCTeam"
+    "osmanic-website": "https://home.osmanic.co"
+    "foto": "https://foto.osmanic.co"
+    "osmanic-prototypes": "https://prototypes.osmanic.co"
 };
 
 const hash = location.href.split("#")[1] || location.href.split("?")[1];
@@ -12,7 +17,7 @@ if (hash in redirects) {
     text(redirects[hash]);
     setTimeout(() => location.href = redirects[hash], 500)
 } else {
-    heading("404, Not Found");
-    text("The requested page was not found.")
-    document.title = "404, Not Found";
+    heading("Invalid link");
+    text("The link doesn't appear to be valid")
+    document.title = "Invalid Link";
 }
