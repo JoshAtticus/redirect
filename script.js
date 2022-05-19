@@ -17,7 +17,7 @@ if (hash in redirects) {
     text(redirects[hash]);
     setTimeout(() => location.href = redirects[hash], 500)
 } else {
-    heading("Invalid link");
-    text("The link doesn't appear to be valid")
-    document.title = "Invalid Link";
+    heading("404, Not Found");
+    text("The requested page was not found.")
+    document.title = "404, Not Found";
 }
